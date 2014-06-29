@@ -10,6 +10,6 @@ Using
 =====
 
 ```
-brew tab TingPing/gnome
+brew tap TingPing/gnome
 brew install TingPing/gnome/gtk+
 ```
