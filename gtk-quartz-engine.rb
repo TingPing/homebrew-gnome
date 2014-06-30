@@ -2,8 +2,7 @@ require 'formula'
 
 class GtkQuartzEngine < Formula
   homepage 'https://wiki.gnome.org/Projects/GTK%2B/OSX'
-  # This fork has many fixes not yet merged.
-  head 'https://github.com/TingPing/gtk-quartz-engine.git', :branch => 'mono'
+  head 'https://github.com/jralls/gtk-quartz-engine.git'
 
   depends_on 'gnome-common' => :build
   depends_on 'automake' => :build
