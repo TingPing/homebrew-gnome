@@ -8,11 +8,11 @@ It also contains versions of gtk+ built against the Quartz backend instead of X1
 Note that these conflict with the main homebrew repo.
 
 Using
-=====
+-----
 
 ```
 brew tap TingPing/gnome
-brew install TingPing/gnome/gtk+
+brew install TingPing/gnome/gtk+3
 ```
 
 To get the best gtk experience follow these steps:
@@ -48,5 +48,4 @@ To get the best gtk experience follow these steps:
     ```sh
     glib-compile-schemas --targetdir=$GSETTINGS_SCHEMA_DIR $HOMEBREW_PREFIX/share/glib-2.0/schemas
     gdk-pixbuf-query-loaders --update-cache
-
     ```
