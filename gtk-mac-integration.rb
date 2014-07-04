@@ -9,7 +9,8 @@ class GtkMacIntegration < Formula
 #  end
 
   head do
-      url 'git://git.gnome.org/gtk-mac-integration'
+      # Fork with a few improvements, will merge upstream
+      url 'https://github.com/TingPing/gtk-mac-integration.git', :branch => 'build'
       depends_on 'gnome-common' => :build
       depends_on 'automake' => :build
       depends_on 'autoconf' => :build
@@ -23,6 +24,10 @@ class GtkMacIntegration < Formula
   depends_on 'TingPing/gnome/gtk+3' => :optional
   depends_on 'TingPing/gnome/gtk+' => :optional
 
+  if build.without?("gtk+3") && build.without?("gtk+")
+    odie "You must build with gtk+ and/or gtk+3 support."
+  end
+
   def install
     args = %W[
       --disable-debug
@@ -30,18 +35,14 @@ class GtkMacIntegration < Formula
       --prefix=#{prefix}
     ]
 
-    # TODO: Fix building against both upstream.
     if build.with? 'gtk+3'
         args << '--with-gtk3'
-    elsif build.with? 'gtk+'
+    end
+    if build.with? 'gtk+'
         args << '--with-gtk2'
-    else
-        onoe 'You must build with either gtk+3 or gtk+ support.'
-        exit
     end
 
-    # TODO: Fix ./autogen.sh upstream.
-    system "gnome-autogen.sh", *args
-    system "make install"
+    system "./autogen.sh", *args
+    system "make", "install"
   end
 end
