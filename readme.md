@@ -19,14 +19,20 @@ To get the best gtk experience follow these steps:
 
 - Install:
     ```
-    gnome-icon-theme* gnome-themes-standard
+    gnome-icon-theme* gnome-themes-standard gtk-quartz-engine
     ```
 
-- Set theme in *~/.config/gtk-3.0/settings.ini*:
-    ```ini
-    [Settings]
-    gtk-theme-name = Adwaita
-    ```
+- Set themes
+    - *~/.config/gtk-3.0/settings.ini*:
+        ```ini
+        [Settings]
+        gtk-theme-name = "Adwaita"
+        ```
+    - *~/.gtkrc-2.0*:
+        ```
+        gtk-theme-name = "Quartz"
+        ```
+
 - Set up gtk environment variables:
     ```sh
     # HOMEBREW_PREFIX would be /usr/local by default.
@@ -39,7 +45,6 @@ To get the best gtk experience follow these steps:
     export GTK_PATH="$HOMEBREW_PREFIX"
     export PANGO_LIBDIR="$HOMEBREW_PREFIX/lib"
     export PANGO_SYSCONFDIR="$HOMEBREW_PREFIX/etc"
-    export GTK2_RC_FILES="$HOMEBREW_PREFIX/etc/gtk-2.0/gtkrc"
     export GDK_PIXBUF_MODULEDIR="$HOMEBREW_PREFIX/lib/gdk-pixbuf-2.0/2.10.0/loaders"
     export GDK_PIXBUF_MODULE_FILE="$HOMEBREW_PREFIX/etc/gtk-2.0/gdk-pixbuf.loaders"
     ```
