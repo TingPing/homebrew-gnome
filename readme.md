@@ -24,12 +24,15 @@ To get the best gtk experience follow these steps:
 
 - Set themes
     - *~/.config/gtk-3.0/settings.ini*:
+
         ```ini
         [Settings]
         gtk-theme-name = "Adwaita"
         ```
+
     - *~/.gtkrc-2.0*:
-        ```
+
+        ```ini
         gtk-theme-name = "Quartz"
         ```
 
