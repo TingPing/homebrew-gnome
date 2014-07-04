@@ -7,7 +7,7 @@ class Pithos < Formula
  
   depends_on :python3
   depends_on 'pygobject3' => 'with-python3'
-  depends_on 'python-dbus' => 'with-python3'
+  depends_on 'Homebrew/python/python-dbus' => 'with-python3'
   depends_on 'gsettings-desktop-schemas'
   depends_on 'gst-plugins-good'
   depends_on 'gst-plugins-ugly' => 'with-mad'
@@ -28,9 +28,9 @@ class Pithos < Formula
     ENV['PYTHONPATH'] = "#{lib}/python3.4/site-packages"
     ENV.prepend_create_path 'PYTHONPATH', "#{lib}/python3.4/site-packages"
 
-    resource('pylast').stage {
+    resource('pylast').stage do
       system 'python3', 'setup.py', 'install', "--prefix=#{libexec}"
-    }
+    end
 
     system 'python3', 'setup.py', 'install', "--prefix=#{prefix}"
 
