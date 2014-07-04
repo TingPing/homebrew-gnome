@@ -3,6 +3,7 @@ require 'formula'
 class Libpeas < Formula
   homepage 'http://gnome.org/'
   url 'http://ftp.gnome.org/pub/GNOME/core/3.12/3.12.2/sources/libpeas-1.10.0.tar.xz'
+  sha1 '3111b53eca619d8cbe9ad7d9ca74767b281eef2a'
 
   depends_on 'pkg-config' => :build
   depends_on 'intltool' => :build
