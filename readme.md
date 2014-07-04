@@ -27,7 +27,7 @@ To get the best gtk experience follow these steps:
 
         ```ini
         [Settings]
-        gtk-theme-name = "Adwaita"
+        gtk-theme-name = Adwaita
         ```
 
     - *~/.gtkrc-2.0*:
