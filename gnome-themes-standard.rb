@@ -10,7 +10,7 @@ class GnomeThemesStandard < Formula
   depends_on 'glib' => :build
   depends_on 'gettext'
   depends_on 'TingPing/gnome/gtk+3'
-  depends_on 'TingPing/gnome/librsvg' => ['with-gtk3', :build]
+  depends_on 'TingPing/gnome/librsvg' => ['with-gtk+3', :build]
 
   def install
     system "./configure", "--disable-dependency-tracking",
