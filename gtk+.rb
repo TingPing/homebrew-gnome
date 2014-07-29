@@ -18,7 +18,7 @@ class Gtkx < Formula
   depends_on 'gobject-introspection'
   depends_on 'gdk-pixbuf'
   depends_on 'atk'
-  depends_on 'pango' => 'without-x'
+  depends_on 'pango' => 'without-x11'
   depends_on 'cairo' => 'without-x11'
 
   fails_with :llvm do
