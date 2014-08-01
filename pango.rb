@@ -32,6 +32,10 @@ class Pango < Formula
     system "make", "install"
   end
 
+  def post_install
+    system "#{bin}/pango-querymodules > '#{HOMEBREW_PREFIX}/etc/pango/pango.modules'"
+  end
+
   test do
     system "#{bin}/pango-querymodules", "--version"
   end
