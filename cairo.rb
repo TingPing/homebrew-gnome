@@ -9,6 +9,11 @@ class Cairo < Formula
   mirror 'https://downloads.sourceforge.net/project/machomebrew/mirror/cairo-1.12.16.tar.xz'
   sha256 '2505959eb3f1de3e1841023b61585bfd35684b9733c7b6a3643f4f4cbde6d846'
 
+  bottle do
+    root_url 'http://dl.tingping.se/homebrew'
+    sha1 "a28b9844171c735ec30c1fc4657f682f14262da4" => :mavericks
+  end
+
   keg_only :provided_pre_mountain_lion
 
   option :universal

@@ -5,6 +5,11 @@ class Pango < Formula
   url "http://ftp.gnome.org/pub/GNOME/sources/pango/1.36/pango-1.36.5.tar.xz"
   sha256 "be0e94b2e5c7459f0b6db21efab6253556c8f443837200b8736d697071276ac8"
 
+  bottle do
+    root_url 'http://dl.tingping.se/homebrew'
+    sha1 "e840fd2a98596f23d45cc4e6f280eb652c0aac4e" => :mavericks
+  end
+
   depends_on 'pkg-config' => :build
   depends_on 'glib'
   depends_on 'TingPing/gnome/cairo'

@@ -8,7 +8,7 @@ class Gtkx3 < Formula
   
   bottle do
       root_url 'http://dl.tingping.se/homebrew'
-      sha1 "e0e26357cd1ae202158e1d31f0df4b86958e2bbe" => :mavericks
+      sha1 "719600dc6e756fc86de376422d942f603827b08e" => :mavericks
   end
 
   depends_on 'pkg-config' => :build
