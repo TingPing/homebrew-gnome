@@ -19,7 +19,6 @@ class Gtkx3 < Formula
   depends_on 'gobject-introspection'
   depends_on 'gdk-pixbuf'
   depends_on 'atk'
-  depends_on 'at-spi2-atk'
   depends_on 'TingPing/gnome/pango'
   depends_on 'TingPing/gnome/cairo'
 
