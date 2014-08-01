@@ -7,7 +7,7 @@ class GnomeIconTheme < Formula
 
   depends_on "pkg-config" => :build
   depends_on "gettext" => :build
-  depends_on "gtk+3" => :build # for gtk3-update-icon-cache
+  depends_on "TingPing/gnome/gtk+3" => :build # for gtk3-update-icon-cache
   depends_on "icon-naming-utils" => :build
   depends_on "intltool" => :build
 
