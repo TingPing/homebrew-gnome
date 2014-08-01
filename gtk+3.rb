@@ -20,8 +20,8 @@ class Gtkx3 < Formula
   depends_on 'gdk-pixbuf'
   depends_on 'atk'
   depends_on 'at-spi2-atk'
-  depends_on 'pango' => 'without-x11'
-  depends_on 'cairo' => 'without-x11'
+  depends_on 'TingPing/gnome/pango'
+  depends_on 'TingPing/gnome/cairo'
 
   def install
     # gtk-update-icon-cache is used during installation, and
