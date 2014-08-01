@@ -8,6 +8,9 @@ class Librsvg < Formula
   depends_on 'pkg-config' => :build
   depends_on 'TingPing/gnome/gtk+' => :optional
   depends_on 'TingPing/gnome/gtk+3' => :optional
+  depends_on 'TingPing/gnome/cairo'
+  depends_on 'TingPing/gnome/pango'
+  depends_on 'gdk-pixbuf'
   depends_on 'libcroco'
   depends_on 'libgsf' => :optional
 
