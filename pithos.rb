@@ -6,7 +6,7 @@ class Pithos < Formula
   sha1 '30c596ad5f471b5a2aae1c0355d7d096b509fa31'
  
   depends_on :python3
-  depends_on 'pygobject3' => 'with-python3'
+  depends_on 'TingPing/gnome/pygobject3' => 'with-python3'
   depends_on 'Homebrew/python/python-dbus' => 'with-python3'
   depends_on 'gsettings-desktop-schemas'
   depends_on 'gst-plugins-good'
