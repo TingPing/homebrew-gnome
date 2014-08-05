@@ -11,7 +11,7 @@ class Cairo < Formula
 
   bottle do
     root_url 'http://dl.tingping.se/homebrew'
-    sha1 "a28b9844171c735ec30c1fc4657f682f14262da4" => :mavericks
+    revision 1
   end
 
   keg_only :provided_pre_mountain_lion
@@ -19,8 +19,6 @@ class Cairo < Formula
   option :universal
 
   depends_on 'pkg-config' => :build
-  depends_on 'freetype'
-  depends_on 'fontconfig'
   depends_on 'libpng'
   depends_on 'pixman'
   depends_on 'glib'
@@ -36,6 +34,7 @@ class Cairo < Formula
       --enable-xlib-xrender=no
       --enable-xcb=no
       --enable-quartz-image
+      --disable-ft
     ]
 
     system "./configure", *args

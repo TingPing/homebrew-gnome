@@ -4,7 +4,6 @@ class Cairomm < Formula
   homepage 'http://cairographics.org/cairomm/'
   url 'http://cairographics.org/releases/cairomm-1.10.0.tar.gz'
   sha256 '068d96c43eae7b0a3d98648cbfc6fbd16acc385858e9ba6d37b5a47e4dba398f'
-  revision 1
 
   option :cxx11
 
@@ -16,7 +15,6 @@ class Cairomm < Formula
   end
 
   depends_on 'TingPing/gnome/cairo'
-  depends_on 'libpng'
 
   def install
     ENV.cxx11 if build.cxx11?
