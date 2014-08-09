@@ -13,7 +13,7 @@ class Pango < Formula
   depends_on 'pkg-config' => :build
   depends_on 'glib'
   depends_on 'TingPing/gnome/cairo'
-  depends_on 'harfbuzz'
+  depends_on 'TingPing/gnome/harfbuzz'
   depends_on 'fontconfig'
   depends_on 'gobject-introspection'
 
