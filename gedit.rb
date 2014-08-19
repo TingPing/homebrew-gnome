@@ -66,6 +66,7 @@ class Gedit < Formula
       --disable-dependency-tracking
       --prefix=#{prefix}
       --disable-schemas-compile
+      --disable-spell
     ]
 
     #if build.without? "spell"
