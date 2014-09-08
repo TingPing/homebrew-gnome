@@ -2,8 +2,8 @@ require 'formula'
 
 class Pango < Formula
   homepage "http://www.pango.org/"
-  url "http://ftp.gnome.org/pub/GNOME/sources/pango/1.36/pango-1.36.6.tar.xz"
-  sha256 "4c53c752823723875078b91340f32136aadb99e91c0f6483f024f978a02c8624"
+  url "http://ftp.gnome.org/pub/GNOME/sources/pango/1.36/pango-1.36.7.tar.xz"
+  sha1 "8cdb1b45bbbec373256695e019f07cd6716980b8"
 
   bottle do
     root_url 'http://dl.tingping.se/homebrew'
