@@ -12,6 +12,7 @@ class Harfbuzz < Formula
   depends_on "pkg-config" => :build
   depends_on "glib"
   depends_on "gobject-introspection"
+  depends_on "icu4c"
   depends_on "freetype"
 
   def install
@@ -20,6 +21,7 @@ class Harfbuzz < Formula
       --prefix=#{prefix}
       --with-coretext=yes
       --with-freetype=yes
+      --with-icu
       --enable-introspection
     ]
 
