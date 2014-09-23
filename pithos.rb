@@ -2,8 +2,8 @@ require 'formula'
 
 class Pithos < Formula
   homepage 'http://pithos.github.io'
-  url 'https://github.com/pithos/pithos/archive/1.0.0.tar.gz'
-  sha1 '30c596ad5f471b5a2aae1c0355d7d096b509fa31'
+  url 'https://github.com/pithos/pithos/archive/1.0.1.tar.gz'
+  sha1 '5e7d8b47cd68a1d454d7ac8ddffffa079e3ad68a'
  
   depends_on :python3
   depends_on 'TingPing/gnome/pygobject3' => 'with-python3'
@@ -15,23 +15,32 @@ class Pithos < Formula
   depends_on 'TingPing/gnome/gtk+3'
   
   resource 'pylast' do
-    url 'https://pypi.python.org/packages/source/p/pylast/pylast-0.5.11.tar.gz'
-    sha1 '0e432279ccbed69580d313db15c1a03a7a39c42c'
-  end    
+    url 'https://pypi.python.org/packages/source/p/pylast/pylast-1.0.0.tar.gz'
+    sha1 '6bd452723b530f93e016a2024632a230fd0e1ee8'
+  end
+
+  resource 'pync' do
+    url 'https://github.com/SeTeM/pync/archive/v1.6.tar.gz'
+    sha1 'cdf86ca4980b725cc8a38ffdc4c179d56f0a52c7'
+  end
 
   def install
     inreplace 'setup.py' do |s|
       s.gsub! "/usr", "#{HOMEBREW_PREFIX}"
     end
-      
-    # TODO: Don't hardcode 3.4
-    ENV['PYTHONPATH'] = "#{lib}/python3.4/site-packages"
-    ENV.prepend_create_path 'PYTHONPATH', "#{lib}/python3.4/site-packages"
 
     resource('pylast').stage do
+      ENV['PYTHONPATH'] = "#{libexec}/lib/python3.4/site-packages"
       system 'python3', 'setup.py', 'install', "--prefix=#{libexec}"
     end
 
+    resource('pync').stage do
+      ENV['PYTHONPATH'] = "#{libexec}/lib/python3.4/site-packages"
+      system 'python3', 'setup.py', 'install', "--prefix=#{libexec}"
+    end
+
+    ENV['PYTHONPATH'] = "#{lib}/python3.4/site-packages"
+    mkdir_p ENV['PYTHONPATH']
     system 'python3', 'setup.py', 'install', "--prefix=#{prefix}"
 
     bin.env_script_all_files(libexec+'bin', :PYTHONPATH => ENV['PYTHONPATH'])
