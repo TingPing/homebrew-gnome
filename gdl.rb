@@ -8,7 +8,7 @@ class Gdl < Formula
   depends_on "pkg-config" => :build
   depends_on "intltool" => :build
   depends_on "libxml2"
-  depends_on "TingPing/gnome/gtk+3"
+  depends_on "gtk+3"
 
   def install
     system "./configure", "--disable-dependency-tracking",

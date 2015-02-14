@@ -6,10 +6,10 @@ class Librsvg < Formula
   sha256 '3d7d583271030e21acacc60cb6b81ee305713c9da5e98429cbd609312aea3632'
 
   depends_on 'pkg-config' => :build
-  depends_on 'TingPing/gnome/gtk+' => :optional
-  depends_on 'TingPing/gnome/gtk+3' => :optional
-  depends_on 'TingPing/gnome/cairo'
-  depends_on 'TingPing/gnome/pango'
+  depends_on 'gtk+' => :optional
+  depends_on 'gtk+3' => :optional
+  depends_on 'cairo'
+  depends_on 'pango'
   depends_on 'gdk-pixbuf'
   depends_on 'libcroco'
   depends_on 'libgsf' => :optional

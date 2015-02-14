@@ -10,7 +10,7 @@ class Libpeas < Formula
   depends_on 'gettext' => :build
   depends_on 'glib'
   depends_on 'gobject-introspection'
-  depends_on 'TingPing/gnome/gtk+3'
+  depends_on 'gtk+3' => 'without-x11'
   # TODO: glade, pygobject
 
   # Need these for the patch below

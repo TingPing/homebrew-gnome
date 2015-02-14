@@ -10,8 +10,8 @@ class Gjs < Formula
   depends_on 'spidermonkey24'
   depends_on 'glib'
   depends_on 'gobject-introspection'
-  depends_on 'TingPing/gnome/cairo' # This should be optional but is not
-  depends_on 'TingPing/gnome/gtk+3' => :recommended
+  depends_on 'cairo' # This should be optional but is not
+  depends_on 'gtk+3' => :recommended
 
   def install
     system "./configure", "--disable-dependency-tracking",

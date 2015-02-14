@@ -8,7 +8,7 @@ class AdwaitaIconTheme < Formula
   depends_on 'pkg-config' => :build
   depends_on 'intltool' => :build
   depends_on 'gettext' => :build
-  depends_on 'TingPing/gnome/gtk+' => :build # Just for bin/gtk-update-icon-cache
+  depends_on 'gtk+' => :build # Just for bin/gtk-update-icon-cache
   #depends_on 'inkscape' => :optional
 
   def install

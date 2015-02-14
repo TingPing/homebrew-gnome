@@ -10,8 +10,8 @@ class Dfeet < Formula
   depends_on "intltool" => :build
   depends_on :python
   depends_on "glib"
-  depends_on "TingPing/gnome/pygobject3" => "with-python"
-  depends_on "TingPing/gnome/gtk+3"
+  depends_on "pygobject3" => "with-python"
+  depends_on 'gtk+3' => 'without-x11'
 
   def install
     ENV["GTK_UPDATE_ICON_CACHE"] = "#{Formula["gtk+3"].opt_bin}/gtk3-update-icon-cache"

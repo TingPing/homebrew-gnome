@@ -20,7 +20,7 @@ class Libsexy3 < Formula
   depends_on 'vala' => :recommended
   depends_on 'iso-codes'
   depends_on 'TingPing/gnome/enchant-applespell'
-  depends_on 'TingPing/gnome/gtk+3'
+  depends_on 'gtk+3' => 'without-x11'
 
   def install
     if build.head?

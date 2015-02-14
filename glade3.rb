@@ -18,7 +18,7 @@ class Glade3 < Formula
   depends_on 'scrollkeeper' => :build
   depends_on 'gettext'
   depends_on 'libxml2' => 'with-python'
-  depends_on 'TingPing/gnome/gtk+'
+  depends_on 'gtk+' => 'without-x11'
   depends_on 'TingPing/gnome/gtk-mac-integration' => 'with-gtk+'
 
   # Fix building with gtk-mac-integration
@@ -56,12 +56,12 @@ index c0c6452..e75687d 100644
 @@ -230,7 +230,7 @@ dnl ================================================================
  _gdk_tgt=`$PKG_CONFIG --variable=target gdk-2.0`
  AM_CONDITIONAL([GDK_TARGET_QUARTZ], [test x$_gdk_tgt = xquartz])
- if test "x$_gdk_tgt" = xquartz; then 
+ if test "x$_gdk_tgt" = xquartz; then
 -   PKG_CHECK_MODULES(GTK_MAC, gtk-mac-integration)
 +   PKG_CHECK_MODULES(GTK_MAC, gtk-mac-integration-gtk2)
- 
+
     GTK_MAC_BUNDLE_FLAG=
- 
+
 diff --git a/src/glade-window.c b/src/glade-window.c
 index f2ef58c..18f3250 100644
 --- a/src/glade-window.c
@@ -86,7 +86,7 @@ index f2ef58c..18f3250 100644
  		g_object_ref(sep);
 -		gtk_osxapplication_insert_app_menu_item (theApp, sep, 1);
 +		gtkosx_application_insert_app_menu_item (theApp, sep, 1);
- 
+
  		widget =
  			gtk_ui_manager_get_widget (window->priv->ui, "/MenuBar/EditMenu/Preferences");
 -		gtk_osxapplication_insert_app_menu_item  (theApp, widget, 2);
@@ -95,19 +95,19 @@ index f2ef58c..18f3250 100644
  		g_object_ref(sep);
 -		gtk_osxapplication_insert_app_menu_item (theApp, sep, 3);
 +		gtkosx_application_insert_app_menu_item (theApp, sep, 3);
- 
+
  		widget =
  			gtk_ui_manager_get_widget (window->priv->ui, "/MenuBar/HelpMenu");
 -		gtk_osxapplication_set_help_menu(theApp, GTK_MENU_ITEM(widget));
 +		gtkosx_application_set_help_menu(theApp, GTK_MENU_ITEM(widget));
- 
+
  		g_signal_connect(theApp, "NSApplicationWillTerminate",
  				 G_CALLBACK(quit_cb), window);
- 
+
 -		gtk_osxapplication_ready(theApp);
 +		gtkosx_application_ready(theApp);
- 
+
  	}
  #endif
--- 
+--
 1.8.5.2 (Apple Git-48)

@@ -21,8 +21,8 @@ class GtkMacIntegration < Formula
   depends_on 'intltool' => :build
   depends_on 'gtk-doc' => :build
   depends_on 'glib'
-  depends_on 'TingPing/gnome/gtk+3' => :optional
-  depends_on 'TingPing/gnome/gtk+' => :recommended
+  depends_on 'gtk+3' => :optional
+  depends_on 'gtk+' => :recommended
 
   if build.without?("gtk+3") && build.without?("gtk+")
     odie "You must build with gtk+ and/or gtk+3 support."

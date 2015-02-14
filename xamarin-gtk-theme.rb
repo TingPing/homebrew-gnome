@@ -10,7 +10,7 @@ class XamarinGtkTheme < Formula
   depends_on 'libtool' => :build
   depends_on 'pkg-config' => :build
   depends_on 'intltool' => :build
-  depends_on 'TingPing/gnome/gtk+'
+  depends_on 'gtk+' => 'without-x11'
   depends_on 'gettext'
 
   def install
@@ -20,7 +20,7 @@ class XamarinGtkTheme < Formula
 
     system "make", "install"
   end
-  
+
   def caveats; <<-EOS.undent
     In order to use themes you must export these variables:
         export GTK_DATA_PREFIX=#{HOMEBREW_PREFIX}

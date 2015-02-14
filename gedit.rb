@@ -18,9 +18,9 @@ class Gedit < Formula
   depends_on "libsoup"
   #depends_on "iso-codes" if build.with? "spell"
   #depends_on "TingPing/gnome/enchant-applespell" if build.with? "spell"
-  depends_on "TingPing/gnome/libpeas"
-  depends_on "TingPing/gnome/gtksourceview3"
-  depends_on "TingPing/gnome/gtk+3"
+  depends_on "libpeas"
+  depends_on "gtksourceview3"
+  depends_on "gtk+3"
   depends_on "TingPing/gnome/gtk-mac-integration" => "with-gtk+3"
 
   # Need these for the patches below

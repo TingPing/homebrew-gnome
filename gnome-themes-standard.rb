@@ -9,8 +9,8 @@ class GnomeThemesStandard < Formula
   depends_on 'intltool' => :build
   depends_on 'glib' => :build
   depends_on 'gettext'
-  depends_on 'TingPing/gnome/gtk+3' => :recommended
-  depends_on 'TingPing/gnome/gtk+' => :optional
+  depends_on 'gtk+3' => :recommended
+  depends_on 'gtk+' => :optional
   depends_on 'TingPing/gnome/librsvg' => ['with-gtk+3', :build] # FIXME: gtk+ if build.with gtk+
 
   if build.without?("gtk+3") && build.without?("gtk+")

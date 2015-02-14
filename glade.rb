@@ -17,7 +17,7 @@ class Glade < Formula
   depends_on 'itstool' => :build
   depends_on 'yelp-tools' => :build
   depends_on 'gettext'
-  depends_on 'TingPing/gnome/gtk+3'
+  depends_on 'gtk+3' => 'without-x11'
 
   # gtk-mac-integration is broken, this disables it for now.
   patch :DATA
@@ -52,13 +52,13 @@ index 0c19bdd..7dd21f7 100644
 +++ b/configure.ac
 @@ -258,31 +258,6 @@ if test "$native_win32" = "yes"; then
  fi
- 
+
  dnl ================================================================
--dnl Check for GDK Quartz and MacOSX integration package 
+-dnl Check for GDK Quartz and MacOSX integration package
 -dnl ================================================================
 -_gdk_tgt=`$PKG_CONFIG --variable=targets gdk-3.0`
 -AM_CONDITIONAL([GDK_TARGET_QUARTZ], [test x$_gdk_tgt = xquartz])
--if test "x$_gdk_tgt" = xquartz; then 
+-if test "x$_gdk_tgt" = xquartz; then
 -   PKG_CHECK_MODULES(GTK_MAC, gtk-mac-integration)
 -
 -   GTK_MAC_BUNDLE_FLAG=
@@ -71,7 +71,7 @@ index 0c19bdd..7dd21f7 100644
 -      AC_MSG_NOTICE([enableing mac bundle..])
 -
 -      GTK_MAC_BUNDLE_FLAG=-DMAC_BUNDLE
--   fi      
+-   fi
 -
 -   AC_SUBST(GTK_MAC_BUNDLE_FLAG)
 -   AC_SUBST(GTK_MAC_LIBS)
@@ -82,5 +82,5 @@ index 0c19bdd..7dd21f7 100644
  dnl Enable installation of Gladeui catalog
  dnl ================================================================
  AC_ARG_ENABLE([gladeui],
--- 
+--
 1.8.5.2 (Apple Git-48)
