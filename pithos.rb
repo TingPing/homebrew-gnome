@@ -20,8 +20,8 @@ class Pithos < Formula
   end
 
   resource 'pync' do
-    url 'https://github.com/SeTeM/pync/archive/v1.6.tar.gz'
-    sha1 'cdf86ca4980b725cc8a38ffdc4c179d56f0a52c7'
+    url 'https://github.com/SeTeM/pync/archive/v1.6.1.tar.gz'
+    sha1 '81d880a36e44f0a5a90d786bd4576d3ab11dd3bc'
   end
 
   def install
