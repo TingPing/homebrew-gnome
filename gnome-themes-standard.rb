@@ -11,7 +11,7 @@ class GnomeThemesStandard < Formula
   depends_on 'gettext'
   depends_on 'gtk+3' => :recommended
   depends_on 'gtk+' => :optional
-  depends_on 'TingPing/gnome/librsvg' => ['with-gtk+3', :build] # FIXME: gtk+ if build.with gtk+
+  depends_on 'librsvg' => ['without-x11', 'with-gtk+3', :build] # FIXME: gtk+ if build.with gtk+
 
   if build.without?("gtk+3") && build.without?("gtk+")
     odie "You must build with gtk+ and/or gtk+3 support."
