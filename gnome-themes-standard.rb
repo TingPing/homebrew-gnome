@@ -2,8 +2,8 @@ require 'formula'
 
 class GnomeThemesStandard < Formula
   homepage 'http://gnome.org'
-  url 'https://download.gnome.org/core/3.12/3.12.2/sources/gnome-themes-standard-3.12.0.tar.xz'
-  sha256 'a05d1b7ca872b944a69d0c0cc2369408ece32ff4355e37f8594a1b70d13c3217'
+  url 'https://download.gnome.org/core/3.14/3.14.2/sources/gnome-themes-standard-3.14.2.tar.xz'
+  sha256 '2fc21963bd8b65afff9a7f1b025035adc6d9db2810a134172c7a0155d81a7d28'
 
   depends_on 'pkg-config' => :build
   depends_on 'intltool' => :build

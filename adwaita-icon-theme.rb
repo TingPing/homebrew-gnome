@@ -2,8 +2,8 @@ require 'formula'
 
 class AdwaitaIconTheme < Formula
   homepage 'http://gtk.org/'
-  url 'http://ftp.gnome.org/pub/gnome/sources/adwaita-icon-theme/3.13/adwaita-icon-theme-3.13.91.tar.xz'
-  sha256 'd0cf4705d3439c68d344431b62cca5fe6fcf91bd38c745c48b2476d0aa41b8ad'
+  url 'https://download.gnome.org/core/3.14/3.14.2/sources/adwaita-icon-theme-3.14.1.tar.xz'
+  sha256 'b776a7ad58c97f4c1ede316e44d8d054105429cb4e3a8ec46616a14b11df48ee'
 
   depends_on 'pkg-config' => :build
   depends_on 'intltool' => :build
