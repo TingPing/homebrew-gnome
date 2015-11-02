@@ -2,8 +2,8 @@ require 'formula'
 
 class Gjs < Formula
   homepage 'https://wiki.gnome.org/Projects/Gjs'
-  url 'http://ftp.gnome.org/pub/GNOME/sources/gjs/1.40/gjs-1.40.1.tar.xz'
-  sha256 '2f0d80ec96c6284785143abe51377d8a284977ea6c3cf0cef1020d92eae41793'
+  url 'http://ftp.gnome.org/pub/GNOME/sources/gjs/1.44/gjs-1.44.0.tar.xz'
+  sha256 '88c960f6ad47a6931d123f5d6317d13704f58572f68a4391913a254ff27dce80'
 
   depends_on 'pkg-config' => :build
   depends_on 'readline'
