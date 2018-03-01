@@ -2,8 +2,8 @@ require 'formula'
 
 class Pithos < Formula
   homepage 'http://pithos.github.io'
-  url 'https://github.com/pithos/pithos/archive/1.0.1.tar.gz'
-  sha1 '5e7d8b47cd68a1d454d7ac8ddffffa079e3ad68a'
+  url 'https://github.com/pithos/pithos/archive/1.4.1.tar.gz'
+  sha256 '33682e5f7ac37ae99f91d09ceeb76fd51ca2cee0a326cbc8118079b24a51fbd5'
 
   depends_on :python3
   depends_on 'tingping/gnome/pygobject3' => 'with-python3'
@@ -15,13 +15,13 @@ class Pithos < Formula
   depends_on 'gtk+3' => 'without-x11'
 
   resource 'pylast' do
-    url 'https://pypi.python.org/packages/source/p/pylast/pylast-1.0.0.tar.gz'
-    sha1 '6bd452723b530f93e016a2024632a230fd0e1ee8'
+    url 'https://github.com/pylast/pylast/archive/2.1.0.tar.gz'
+    sha256 '953731026db8dcecd1bdffa826eead2b122c0a16ba51b9328f90532a74a47239'  
   end
 
   resource 'pync' do
     url 'https://github.com/SeTeM/pync/archive/v1.6.1.tar.gz'
-    sha1 '81d880a36e44f0a5a90d786bd4576d3ab11dd3bc'
+    sha256 '04f5339847dd6b677a935756699323ab4d35c128bf8123406a9042a3883cf7d9'
   end
 
   def install
